@@ -12,22 +12,26 @@ namespace AcademiaProgramador2021
 {
     public partial class MenuPrincipal : Form
     {
-        RegistroEquipamentos re;
+        RegistroEquipamentos tela1; //Frame de adm de equipamentos 
+        RegistroChamadas tela2;     //Frame de adm de equipamentos 
         public MenuPrincipal()
         {
-            InitializeComponent();
+            InitializeComponent(); 
             
         }
 
-        private void MenuPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        //ação de abrir o Frame 1
         private void button1_Click(object sender, EventArgs e)
         {
-            re = new RegistroEquipamentos();
-            re.ShowDialog();
+            tela1 = new RegistroEquipamentos();
+            tela1.ShowDialog();
+        }
+
+        //ação de abrir o Frame 2
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tela2 = new RegistroChamadas();
+            tela2.ShowDialog();
         }
     }
 }
